@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restro – Menu</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#9B2C1F">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Restro">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#">Restro</a>
+      <button class="cart-btn" id="openCart" aria-label="Open cart">
+        Cart <span class="badge" id="count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow" id="tableInfo">Dine-in</p>
+      <h1>Fresh food, ordered<br>straight from your table.</h1>
+      <p class="sub">Browse the menu, add your favourites and send the order to the kitchen.</p>
+      <button class="suggest-btn" id="openQuiz">Not sure what to eat? Get a suggestion</button>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="toolbar">
+      <div class="tabs" id="tabs"></div>
+      <label class="switch">
+        <input type="checkbox" id="vegOnly">
+        <span class="track"></span>
+        <span>Veg only</span>
+      </label>
+    </div>
+
+    <div class="grid" id="menu"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Restro · College project</div>
+  </footer>
+
+  <!-- Cart side panel -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="panel" id="panel" aria-label="Your order">
+    <div class="panel-head">
+      <h2>Your order</h2>
+      <button class="close" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div class="panel-body" id="cartItems"></div>
+    <div class="panel-foot">
+      <div class="row"><span>Total</span><strong id="total">₹0</strong></div>
+      <button class="place" id="placeOrder">Place order</button>
+    </div>
+  </aside>
+
+  <!-- Mood quiz popup -->
+  <div class="quiz-overlay" id="quizOverlay">
+    <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-label="Food suggestion quiz"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
